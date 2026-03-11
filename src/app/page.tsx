@@ -115,7 +115,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-8xl font-bold text-white tracking-tighter mb-8"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white tracking-tighter mb-8"
             >
               Architecting the{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-orange-400 to-amber-300 animate-gradient-x">
@@ -128,7 +128,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="text-xl text-slate-400 mb-12 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto"
             >
               From AI-powered consulting to full-cycle cloud transformation — we deploy intelligent solutions that scale with your ambition.
             </motion.p>
@@ -137,13 +137,13 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0"
             >
-              <Link href="/services" className="px-8 py-4 rounded-full bg-accent text-white font-semibold hover:bg-accent/90 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-accent/25 flex items-center justify-center group">
+              <Link href="/services" className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-full bg-accent text-white font-semibold hover:bg-accent/90 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-accent/25 flex items-center justify-center group">
                 Explore Solutions
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="/contact" className="px-8 py-4 rounded-full bg-white/5 text-white border border-white/10 font-medium hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm flex items-center justify-center">
+              <Link href="/contact" className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-full bg-white/5 text-white border border-white/10 font-medium hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm flex items-center justify-center">
                 Schedule a Consultation
               </Link>
             </motion.div>
@@ -175,14 +175,14 @@ export default function Home() {
       {/* Mobile Stats Ribbon */}
       <section className="bg-slate-900 py-8 lg:hidden border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
             {[
               { value: "10+", label: "Years Experience" },
               { value: "500+", label: "Projects Delivered" },
               { value: "50+", label: "Tech Experts" },
               { value: "99%", label: "Client Satisfaction" },
             ].map((stat) => (
-              <div key={stat.label}>
+              <div key={stat.label} className="bg-white/5 p-4 rounded-2xl border border-white/5 sm:bg-transparent sm:p-0 sm:border-0">
                 <div className="text-3xl font-bold text-accent">{stat.value}</div>
                 <div className="text-xs text-slate-400 uppercase tracking-wider mt-1">{stat.label}</div>
               </div>

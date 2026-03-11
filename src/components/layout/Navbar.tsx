@@ -33,7 +33,7 @@ export function Navbar() {
   return (
     <nav 
       className={cn(
-        "fixed top-0 z-50 w-full transition-all duration-300 border-b",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
         isScrolled 
           ? "bg-white/80 backdrop-blur-md border-slate-200 py-4 shadow-sm" 
           : cn(
