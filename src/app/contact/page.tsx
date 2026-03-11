@@ -1,9 +1,39 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Send, CheckCircle2 } from "lucide-react";
 
 export default function Contact() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Construct mailto link
+    const mailtoLink = `mailto:contact@meghainfollc.com?subject=${encodeURIComponent(formData.subject || "Inquiry from Website")}&body=${encodeURIComponent(
+      `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
+    setIsSubmitted(true);
+    
+    // Reset success state after 5 seconds
+    setTimeout(() => setIsSubmitted(false), 5000);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
       {/* Page Header */}
@@ -33,7 +63,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col lg:flex-row">
             
-            {/* Contact Information & Map Placeholder */}
+            {/* Contact Information & Map */}
             <div className="lg:w-5/12 bg-slate-900 text-white p-12 flex flex-col relative overflow-hidden">
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
               
