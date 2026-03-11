@@ -104,10 +104,18 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="mt-auto relative z-10 w-full h-64 bg-slate-800 rounded-2xl overflow-hidden flex flex-col items-center justify-center border border-slate-700/50">
-                <MapPin className="w-12 h-12 text-slate-600 mb-3" />
-                <p className="text-slate-500 font-medium tracking-wide">Interactive Map Placeholder</p>
+              {/* Functional Map */}
+              <div className="mt-auto relative z-10 w-full h-80 bg-slate-800 rounded-2xl overflow-hidden shadow-inner border border-white/5">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.18730!2d-96.699!3d33.019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c21da13c59513%3A0x62aa036489cd602b!2sPlano%2C%20TX!5e0!3m2!1sen!2sus!4v1710150000000!5m2!1sen!2sus"
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0, filter: 'grayscale(1) invert(0.9) contrast(1.2)' }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="opacity-80 hover:opacity-100 transition-opacity duration-500"
+                ></iframe>
               </div>
             </div>
 
@@ -116,13 +124,16 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-primary mb-2">Send us a Message</h2>
               <p className="text-slate-500 mb-8">Fill out the form below and our team will get back to you within 24 hours.</p>
               
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="firstName" className="text-sm font-medium text-slate-700">First Name</label>
                     <input 
                       type="text" 
                       id="firstName" 
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors bg-slate-50/50"
                       placeholder="John" 
                     />
@@ -132,6 +143,9 @@ export default function Contact() {
                     <input 
                       type="text" 
                       id="lastName" 
+                      required
+                      value={formData.lastName}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors bg-slate-50/50"
                       placeholder="Doe" 
                     />
@@ -143,6 +157,9 @@ export default function Contact() {
                   <input 
                     type="email" 
                     id="email" 
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors bg-slate-50/50"
                     placeholder="john@company.com" 
                   />
@@ -153,6 +170,9 @@ export default function Contact() {
                   <input 
                     type="text" 
                     id="subject" 
+                    required
+                    value={formData.subject}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors bg-slate-50/50"
                     placeholder="How can we help you?" 
                   />
@@ -162,7 +182,10 @@ export default function Contact() {
                   <label htmlFor="message" className="text-sm font-medium text-slate-700">Message</label>
                   <textarea 
                     id="message" 
+                    required
                     rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors bg-slate-50/50 resize-none"
                     placeholder="Tell us about your project or inquiry..." 
                   ></textarea>
@@ -170,12 +193,36 @@ export default function Contact() {
 
                 <button 
                   type="submit" 
-                  className="w-full flex items-center justify-center py-4 px-8 rounded-xl bg-primary text-white font-semibold hover:bg-accent transition-all duration-300 shadow-lg hover:shadow-accent/20"
+                  disabled={isSubmitted}
+                  className={`w-full flex items-center justify-center py-4 px-8 rounded-xl font-semibold transition-all duration-300 shadow-lg ${
+                    isSubmitted 
+                      ? "bg-green-500 text-white" 
+                      : "bg-primary text-white hover:bg-accent hover:shadow-accent/20"
+                  }`}
                 >
-                  Send Message
-                  <Send className="w-5 h-5 ml-2" />
+                  {isSubmitted ? (
+                    <>
+                      Message Sent
+                      <CheckCircle2 className="w-5 h-5 ml-2" />
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <Send className="w-5 h-5 ml-2" />
+                    </>
+                  )}
                 </button>
               </form>
+              
+              {isSubmitted && (
+                <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-4 text-center text-green-600 font-medium text-sm"
+                >
+                  Email client opened! Thank you for reaching out.
+                </motion.p>
+              )}
             </div>
 
           </div>
