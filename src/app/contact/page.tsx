@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send, CheckCircle2 } from "lucide-react";
+import { ParticleNetwork } from "@/components/ui/ParticleNetwork";
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -37,7 +38,15 @@ export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
       {/* Page Header */}
-      <section className="bg-primary pt-32 pb-20 text-center text-white">
+      <section className="bg-primary pt-32 pb-20 text-center text-white relative overflow-hidden">
+        <ParticleNetwork 
+          className="z-0 opacity-40" 
+          particleColor="rgba(249, 115, 22, 0.4)"
+          lineColor="rgba(249, 115, 22, 0.12)"
+          particleCount={40}
+          maxDistance={120}
+          speed={0.2}
+        />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}

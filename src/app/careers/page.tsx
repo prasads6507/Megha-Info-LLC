@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { ParticleNetwork } from "@/components/ui/ParticleNetwork";
 import { motion } from "framer-motion";
 import { 
   Briefcase, 
@@ -92,9 +93,16 @@ export default function Careers() {
     <div className="flex flex-col min-h-screen bg-[#F8FAFC]">
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center bg-primary overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+        <ParticleNetwork 
+          className="z-0 opacity-60" 
+          particleColor="rgba(249, 115, 22, 0.4)"
+          lineColor="rgba(249, 115, 22, 0.12)"
+          particleCount={55}
+          maxDistance={140}
+          speed={0.25}
+        />
+        <div className="absolute inset-0 opacity-20 z-[1]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#F97316_0%,transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">

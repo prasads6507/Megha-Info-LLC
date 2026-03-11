@@ -3,30 +3,29 @@ import { Rocket, Mail, Phone, MapPin, ChevronRight, Linkedin, Twitter, Github } 
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-slate-300 pt-16 pb-8 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="relative bg-slate-950 text-slate-300 pt-20 pb-8 border-t border-white/5 overflow-hidden">
+      {/* Subtle Glow Effect */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Column 1: About */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2 text-white">
-              <div className="bg-accent text-white p-2 rounded-lg">
+              <div className="bg-accent text-white p-2 rounded-lg shadow-lg shadow-accent/20">
                 <Rocket className="w-5 h-5" />
               </div>
               <span className="font-bold text-xl tracking-tight">Megha Info LLC</span>
             </Link>
             <p className="text-sm leading-relaxed text-slate-400">
-              IT Strategy at the intersection of technology and aspiration. Empowering enterprise excellence through cutting-edge solutions and a constancy of learning.
+              Architecting the digital future through precision engineering and a constancy of learning. We empower enterprises to scale with intelligent, security-first solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
-                <Github className="w-4 h-4" />
-              </a>
+              {[Linkedin, Twitter, Github].map((Icon, i) => (
+                <a key={i} href="#" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all duration-300">
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
             </div>
           </div>
 

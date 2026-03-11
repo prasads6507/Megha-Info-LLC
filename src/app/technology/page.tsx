@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { ParticleNetwork } from "@/components/ui/ParticleNetwork";
 import { motion } from "framer-motion";
 import { Code2, Cpu, Globe, Server, Database, Lock, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -19,7 +20,15 @@ export default function Technology() {
     <div className="flex flex-col min-h-screen">
       {/* Page Header */}
       <section className="bg-primary pt-32 pb-20 text-center text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-primary to-primary"></div>
+        <ParticleNetwork 
+          className="z-0 opacity-60" 
+          particleColor="rgba(249, 115, 22, 0.4)"
+          lineColor="rgba(249, 115, 22, 0.12)"
+          particleCount={60}
+          maxDistance={140}
+          speed={0.25}
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-primary to-primary z-[1]"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}

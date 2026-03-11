@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -8,7 +8,16 @@ import { Menu, X, Rocket } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -19,16 +28,38 @@ export function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
+  const isDarkHeroPage = ["/", "/services", "/about", "/technology", "/careers"].includes(pathname);
+
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <nav 
+      className={cn(
+        "fixed top-0 z-50 w-full transition-all duration-300 border-b",
+        isScrolled 
+          ? "bg-white/80 backdrop-blur-md border-slate-200 py-4 shadow-sm" 
+          : cn(
+              "py-6",
+              isDarkHeroPage 
+                ? "bg-transparent border-transparent" 
+                : "bg-white border-transparent"
+            )
+      )}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="bg-primary text-white p-2 rounded-lg group-hover:bg-accent transition-colors">
+              <div className={cn(
+                "p-2 rounded-lg transition-colors",
+                isScrolled || !isDarkHeroPage ? "bg-primary text-white group-hover:bg-accent" : "bg-accent text-white group-hover:bg-white group-hover:text-accent"
+              )}>
                 <Rocket className="w-6 h-6" />
               </div>
-              <span className="font-bold text-xl tracking-tight text-primary">Megha Info LLC</span>
+              <span className={cn(
+                "font-bold text-xl tracking-tight transition-colors",
+                isScrolled || !isDarkHeroPage ? "text-primary" : "text-white"
+              )}>
+                Megha Info LLC
+              </span>
             </Link>
           </div>
           
@@ -39,7 +70,9 @@ export function Navbar() {
                 href={link.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-accent",
-                  pathname === link.href ? "text-accent" : "text-slate-600"
+                  pathname === link.href 
+                    ? "text-accent" 
+                    : (isScrolled || !isDarkHeroPage ? "text-slate-600" : "text-slate-200")
                 )}
               >
                 {link.name}
@@ -47,7 +80,12 @@ export function Navbar() {
             ))}
             <Link 
               href="/contact"
-              className="px-5 py-2.5 rounded-full bg-primary text-white text-sm font-medium hover:bg-accent transition-colors shadow-sm"
+              className={cn(
+                "px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm",
+                isScrolled || !isDarkHeroPage
+                  ? "bg-primary text-white hover:bg-accent"
+                  : "bg-white text-primary hover:bg-accent hover:text-white"
+              )}
             >
               Get Started
             </Link>
@@ -56,7 +94,10 @@ export function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-600 hover:text-primary focus:outline-none"
+              className={cn(
+                "focus:outline-none transition-colors",
+                isScrolled || !isDarkHeroPage ? "text-slate-600 hover:text-primary" : "text-white hover:text-accent"
+              )}
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

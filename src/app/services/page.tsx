@@ -2,6 +2,7 @@
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ServiceCard } from "@/components/ui/ServiceCard";
+import { ParticleNetwork } from "@/components/ui/ParticleNetwork";
 import { motion } from "framer-motion";
 import { 
   Monitor, 
@@ -86,7 +87,16 @@ export default function Services() {
     <div className="flex flex-col min-h-screen">
       {/* Page Header */}
       <section className="bg-slate-900 pt-32 pb-20 text-center text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <ParticleNetwork 
+          className="z-0" 
+          particleColor="rgba(249, 115, 22, 0.4)"
+          lineColor="rgba(249, 115, 22, 0.12)"
+          particleCount={60}
+          maxDistance={140}
+          speed={0.2}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-transparent to-slate-900/80 z-[1]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px] z-[1]"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
