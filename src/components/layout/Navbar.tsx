@@ -28,7 +28,7 @@ export function Navbar() {
               <div className="bg-primary text-white p-2 rounded-lg group-hover:bg-accent transition-colors">
                 <Rocket className="w-6 h-6" />
               </div>
-              <span className="font-bold text-xl tracking-tight text-primary">ESOA Tech</span>
+              <span className="font-bold text-xl tracking-tight text-primary">Megha Info LLC</span>
             </Link>
           </div>
           

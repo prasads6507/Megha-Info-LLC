@@ -77,7 +77,7 @@ export default function Technology() {
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-primary">The Constancy of <span className="text-accent">Learning</span></h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                In the technology sector, stagnation is the enemy of success. At ESOA Technologies, our fundamental approach to technology is rooted in what we call the <strong>Constancy of Learning</strong>.
+                In the technology sector, stagnation is the enemy of success. At Megha Info LLC, our fundamental approach to technology is rooted in what we call the <strong>Constancy of Learning</strong>.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
                 We believe that staying ahead of the tech curve isn’t just about adopting the latest framework—it’s about fundamentally understanding emerging paradigms and how they can be applied to solve enterprise challenges more efficiently.

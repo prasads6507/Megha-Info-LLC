@@ -123,7 +123,7 @@ export default function Home() {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Driving Innovation with <span className="text-accent">Velocity</span></h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                At ESOA Technologies, we believe in a constancy of learning. Our mission is to bridge the gap between your aspirations and technological realities.
+                At Megha Info LLC, we believe in a constancy of learning. Our mission is to bridge the gap between your aspirations and technological realities.
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 By combining industry expertise with cutting-edge tools, we engineer solutions that not only solve today's challenges but future-proof your business for tomorrow.

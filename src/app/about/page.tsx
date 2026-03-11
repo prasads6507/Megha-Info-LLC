@@ -49,7 +49,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight"
           >
-            About <span className="text-accent">ESOA Technologies</span>
+            About <span className="text-accent">Megha Info LLC</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function About() {
             >
               <h2 className="text-3xl font-bold text-primary">Our Mission</h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                At ESOA Technologies, our mission is to empower enterprises by bridging the gap between ambitious business goals and actionable technological realities. We deliver strategic, end-to-end IT solutions designed not just to meet the needs of today, but to architect the success of tomorrow.
+                At Megha Info LLC, our mission is to empower enterprises by bridging the gap between ambitious business goals and actionable technological realities. We deliver strategic, end-to-end IT solutions designed not just to meet the needs of today, but to architect the success of tomorrow.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
                 We commit to our clients' success with unwavering dedication, operating as an extension of your own team to achieve mutual breakthroughs.

@@ -113,13 +113,13 @@ export default function Careers() {
               <Mail className="w-12 h-12 text-accent mb-6" />
               <h2 className="text-3xl font-bold mb-4">How to Apply</h2>
               <p className="text-lg text-slate-300 mb-8 max-w-xl">
-                Ready to take the next step in your career? We want to hear from you. Send us your resume and a brief cover letter outlining why you'd be a great fit for ESOA Technologies.
+                Ready to take the next step in your career? We want to hear from you. Send us your resume and a brief cover letter outlining why you'd be a great fit for Megha Info LLC.
               </p>
               <a 
-                href="mailto:careers@esoatech.com" 
+                href="mailto:careers@meghainfollc.com" 
                 className="inline-flex items-center px-8 py-4 rounded-full bg-accent text-white font-semibold text-lg hover:bg-white hover:text-primary transition-colors shadow-lg"
               >
-                careers@esoatech.com
+                careers@meghainfollc.com
               </a>
               <p className="mt-6 text-sm text-slate-400">
                 Please include the job title in the subject line. We aim to respond to all applications within 48 hours.

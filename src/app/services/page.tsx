@@ -142,7 +142,7 @@ export default function Services() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to transform your business?</h2>
             <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-              Partner with ESOA Technologies to leverage our expertise and propel your enterprise to new heights of success.
+              Partner with Megha Info LLC to leverage our expertise and propel your enterprise to new heights of success.
             </p>
             <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-full text-white bg-accent hover:bg-accent/90 transition-colors shadow-lg hover:shadow-accent/20">
               Get in Touch Today
