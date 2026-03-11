@@ -37,7 +37,11 @@ export function Footer() {
               {['Home', 'About Us', 'Technology', 'Careers', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link 
-                    href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
+                    href={
+                      item === 'Home' ? '/' : 
+                      item === 'About Us' ? '/about' : 
+                      `/${item.toLowerCase().replace(' ', '-')}`
+                    }
                     className="text-sm hover:text-accent transition-colors flex items-center group"
                   >
                     <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity text-accent" />

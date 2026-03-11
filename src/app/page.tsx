@@ -5,6 +5,7 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Monitor, Smartphone, Cloud, Database, BarChart3, Settings, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const services = [
@@ -140,13 +141,14 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-slate-100"
             >
-              {/* Image Placeholder */}
-              <div className="absolute inset-0 bg-primary/5 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Monitor className="w-16 h-16 text-primary/20 mx-auto mb-4" />
-                  <p className="text-slate-500 font-medium">Corporate Environment Showcase</p>
-                </div>
-              </div>
+              <Image 
+                src="/images/corporate-showcase.png"
+                alt="Megha Info LLC Corporate Environment"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
             </motion.div>
           </div>
         </div>
