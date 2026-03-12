@@ -138,10 +138,10 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+                className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-accent/20 hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-primary/5 text-primary">
-                  <value.Icon className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-primary/5 text-primary group-hover:bg-accent/10 transition-colors duration-300">
+                  <value.Icon className="w-6 h-6 group-hover:text-accent transition-colors duration-300" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-primary">{value.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{value.description}</p>
