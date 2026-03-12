@@ -19,7 +19,7 @@ export default function Contact() {
     e.preventDefault();
     
     // Construct mailto link
-    const mailtoLink = `mailto:contact@meghainfollc.com?subject=${encodeURIComponent(formData.subject || "Inquiry from Website")}&body=${encodeURIComponent(
+    const mailtoLink = `mailto:hr@meghainfo.com?subject=${encodeURIComponent(formData.subject || "Inquiry from Website")}&body=${encodeURIComponent(
       `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )}`;
     
@@ -86,8 +86,8 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-lg text-white mb-1">Our Headquarters</h3>
                       <p className="text-slate-400 leading-relaxed">
-                        123 Technology Drive, Suite 100<br />
-                        Innovation City, TX 75000<br />
+                        14 Breckenridge Ct.<br />
+                        Bell Mead, NJ 08502<br />
                         United States
                       </p>
                     </div>
@@ -98,7 +98,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg text-white mb-1">Phone Number</h3>
-                      <p className="text-slate-400">+1 (555) 123-4567</p>
+                      <p className="text-slate-400">+1 (908) 493-7683</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -107,7 +107,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg text-white mb-1">Email Address</h3>
-                      <p className="text-slate-400">contact@meghainfollc.com</p>
+                      <p className="text-slate-400">hr@meghainfo.com</p>
                     </div>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export default function Contact() {
               {/* Functional Map */}
               <div className="mt-auto relative z-10 w-full h-80 bg-slate-800 rounded-2xl overflow-hidden shadow-inner border border-white/5">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.18730!2d-96.699!3d33.019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c21da13c59513%3A0x62aa036489cd602b!2sPlano%2C%20TX!5e0!3m2!1sen!2sus!4v1710150000000!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.064567223403!2d-74.67385412344!3d40.451694353456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3e414f4a3e79b%3A0xe549090b8f60c4a4!2s14%20Breckenridge%20Ct%2C%20Belle%20Mead%2C%20NJ%2008502!5e0!3m2!1sen!2sus!4v1710250000000!5m2!1sen!2sus"
                   width="100%" 
                   height="100%" 
                   style={{ border: 0, filter: 'grayscale(1) invert(0.9) contrast(1.2)' }} 

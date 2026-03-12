@@ -75,15 +75,15 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <span>123 Technology Drive, Suite 100<br />Innovation City, TX 75000</span>
+                <span>14 Breckenridge Ct.<br />Bell Mead, NJ 08502</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Phone className="w-4 h-4 text-accent shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (908) 493-7683</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
-                <span>contact@meghainfollc.com</span>
+                <span>hr@meghainfo.com</span>
               </li>
             </ul>
           </div>
