@@ -7,6 +7,8 @@ import { ParticleNetwork } from "@/components/ui/ParticleNetwork";
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -15,19 +17,46 @@ export default function Contact() {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
     
-    // Construct mailto link
-    const mailtoLink = `mailto:hr@meghainfo.com?subject=${encodeURIComponent(formData.subject || "Inquiry from Website")}&body=${encodeURIComponent(
-      `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
-    
-    window.location.href = mailtoLink;
-    setIsSubmitted(true);
-    
-    // Reset success state after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
+    try {
+      const response = await fetch("https://formspree.io/f/xgonyvqr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          subject: formData.subject || "Inquiry from Website",
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
+        // Reset success state after 5 seconds
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        const data = await response.json();
+        setError(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Failed to send message. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -140,6 +169,7 @@ export default function Contact() {
                     <input 
                       type="text" 
                       id="firstName" 
+                      name="firstName"
                       required
                       value={formData.firstName}
                       onChange={handleChange}
@@ -152,6 +182,7 @@ export default function Contact() {
                     <input 
                       type="text" 
                       id="lastName" 
+                      name="lastName"
                       required
                       value={formData.lastName}
                       onChange={handleChange}
@@ -166,6 +197,7 @@ export default function Contact() {
                   <input 
                     type="email" 
                     id="email" 
+                    name="email"
                     required
                     value={formData.email}
                     onChange={handleChange}
@@ -179,6 +211,7 @@ export default function Contact() {
                   <input 
                     type="text" 
                     id="subject" 
+                    name="subject"
                     required
                     value={formData.subject}
                     onChange={handleChange}
@@ -191,6 +224,7 @@ export default function Contact() {
                   <label htmlFor="message" className="text-sm font-medium text-slate-700">Message</label>
                   <textarea 
                     id="message" 
+                    name="message"
                     required
                     rows={5}
                     value={formData.message}
@@ -202,14 +236,23 @@ export default function Contact() {
 
                 <button 
                   type="submit" 
-                  disabled={isSubmitted}
+                  disabled={isSubmitting || isSubmitted}
                   className={`w-full flex items-center justify-center py-4 px-8 rounded-xl font-semibold transition-all duration-300 shadow-lg ${
                     isSubmitted 
                       ? "bg-green-500 text-white" 
-                      : "bg-primary text-white hover:bg-accent hover:shadow-accent/20"
+                      : "bg-primary text-white hover:bg-accent hover:shadow-accent/20 disabled:opacity-70 disabled:cursor-not-allowed"
                   }`}
                 >
-                  {isSubmitted ? (
+                  {isSubmitting ? (
+                    <>
+                      Sending...
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                        className="w-5 h-5 ml-2 border-2 border-white/30 border-t-white rounded-full"
+                      />
+                    </>
+                  ) : isSubmitted ? (
                     <>
                       Message Sent
                       <CheckCircle2 className="w-5 h-5 ml-2" />
@@ -223,13 +266,19 @@ export default function Contact() {
                 </button>
               </form>
               
+              {error && (
+                <p className="mt-4 text-center text-red-500 font-medium text-sm">
+                  {error}
+                </p>
+              )}
+              
               {isSubmitted && (
                 <motion.p 
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="mt-4 text-center text-green-600 font-medium text-sm"
                 >
-                  Email client opened! Thank you for reaching out.
+                  Thank you for reaching out! We will get back to you soon.
                 </motion.p>
               )}
             </div>
