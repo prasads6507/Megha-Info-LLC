@@ -23,16 +23,16 @@ export default function Contact() {
     setError(null);
     
     try {
-      const response = await fetch("https://formspree.io/f/xgonyvqr", {
+      const response = await fetch("https://formsubmit.co/ajax/hr@meghainfo.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
         body: JSON.stringify({
+          _subject: formData.subject || "Inquiry from Website",
           name: `${formData.firstName} ${formData.lastName}`,
           email: formData.email,
-          subject: formData.subject || "Inquiry from Website",
           message: formData.message
         })
       });
