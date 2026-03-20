@@ -35,12 +35,12 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
         isScrolled 
-          ? "bg-white/80 backdrop-blur-md border-slate-200 py-4 shadow-sm" 
+          ? "bg-white/60 backdrop-blur-xl border-white/30 py-4 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]" 
           : cn(
               "py-6",
               isDarkHeroPage 
                 ? "bg-transparent border-transparent" 
-                : "bg-white border-transparent"
+                : "bg-white border-transparent shadow-[0_4px_30px_rgba(0,0,0,0.03)]"
             )
       )}
     >

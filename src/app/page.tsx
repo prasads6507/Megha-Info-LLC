@@ -100,58 +100,158 @@ export default function Home() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px] z-[1]"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-8 backdrop-blur-sm"
-            >
-              <span className="w-2 h-2 rounded-full bg-accent mr-2 animate-pulse"></span>
-              Trusted by 24+ Enterprises Globally
-            </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-left max-w-2xl mx-auto lg:mx-0 pt-10 lg:pt-0">
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-accent text-sm font-medium mb-8 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]"
+              >
+                <span className="w-2 h-2 rounded-full bg-accent mr-2 animate-pulse"></span>
+                Trusted by 24+ Enterprises Globally
+              </motion.div>
 
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white tracking-tighter mb-8"
-            >
-              Architecting the{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-orange-400 to-amber-300 animate-gradient-x">
-                Digital Brain
-              </span>{" "}
-              for Your Enterprise
-            </motion.h1>
+              <motion.h1 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter mb-8"
+              >
+                Architecting the{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-orange-400 to-amber-300 animate-gradient-x drop-shadow-[0_2px_20px_rgba(249,115,22,0.8)]">
+                  Digital Brain
+                </span>{" "}
+                for Your Enterprise
+              </motion.h1>
 
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto"
-            >
-              From AI-powered consulting to full-cycle cloud transformation — we deploy intelligent solutions that scale with your ambition.
-            </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl drop-shadow-md"
+              >
+                From AI-powered consulting to full-cycle cloud transformation — we deploy intelligent solutions that scale with your ambition.
+              </motion.p>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0"
-            >
-              <Link href="/services" className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-full bg-accent text-white font-semibold hover:bg-accent/90 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-accent/25 flex items-center justify-center group">
-                Explore Solutions
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link href="/contact" className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-full bg-white/5 text-white border border-white/10 font-medium hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm flex items-center justify-center">
-                Schedule a Consultation
-              </Link>
-            </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+                className="flex flex-col sm:flex-row gap-4 justify-start"
+              >
+                <Link href="/services" className="px-8 py-4 rounded-full bg-accent text-white font-bold hover:bg-orange-500 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(249,115,22,0.6)] flex items-center justify-center group overflow-hidden relative">
+                  <span className="relative z-10 flex items-center">
+                    Explore Solutions
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+                <Link href="/contact" className="px-8 py-4 rounded-full bg-white/10 text-white border border-white/20 font-bold hover:bg-white/20 hover:scale-105 transition-all duration-300 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] flex items-center justify-center">
+                  Schedule a Consultation
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* Glossy Animated Robot Image */}
+            <div className="relative flex justify-center items-center z-20 h-[300px] sm:min-h-[400px] lg:h-full lg:min-h-[500px] mt-12 lg:mt-0 w-full mb-8 lg:mb-0">
+              {/* Glossy Glow Effect Behind Robot */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] sm:w-[400px] h-[250px] sm:h-[400px] bg-accent/30 rounded-full blur-[60px] sm:blur-[80px] -z-10 animate-pulse"></div>
+              
+              {/* Speech Bubble / Greeting with Typewriter Effect */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, y: 30, rotate: 10 }}
+                animate={{ opacity: 1, scale: 1, y: [0, -5, 0], rotate: 0 }}
+                transition={{ 
+                  opacity: { delay: 1, duration: 0.6 },
+                  scale: { delay: 1, type: "spring", stiffness: 150, damping: 12 },
+                  rotate: { delay: 1, duration: 0.6 },
+                  y: { repeat: Infinity, duration: 4, ease: "easeInOut", delay: 2 }
+                }}
+                className="absolute -top-4 sm:top-4 lg:top-12 right-0 sm:right-0 lg:-right-16 bg-white/20 backdrop-blur-2xl border border-white/40 px-5 sm:px-6 py-3 sm:py-4 rounded-2xl sm:rounded-3xl rounded-br-sm shadow-[0_8px_32px_0_rgba(255,255,255,0.15)] z-30 max-w-[85vw] sm:max-w-none"
+              >
+                <div className="text-sm sm:text-lg font-bold text-white drop-shadow-md flex items-center min-h-[24px] sm:min-h-[28px]">
+                  
+                  {/* Thinking Dots */}
+                  <motion.div 
+                    initial={{ opacity: 1, display: "flex" }} 
+                    animate={{ opacity: 0, display: "none" }} 
+                    transition={{ delay: 2.5, duration: 0.3 }}
+                    className="flex space-x-1.5 items-center px-3 sm:px-4"
+                  >
+                    {[0, 1, 2].map((i) => (
+                      <motion.div
+                        key={i}
+                        animate={{ y: [0, -6, 0] }}
+                        transition={{ repeat: Infinity, duration: 0.8, delay: i * 0.2 }}
+                        className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-white/80 rounded-full"
+                      />
+                    ))}
+                  </motion.div>
+
+                  {/* Typewriter Text */}
+                  <motion.div
+                    initial={{ opacity: 0, display: "none" }}
+                    animate={{ opacity: 1, display: "flex" }}
+                    transition={{ delay: 2.8, duration: 0.1 }}
+                    className="items-center"
+                  >
+                    <span className="whitespace-pre-wrap sm:whitespace-pre tracking-wide leading-relaxed">
+                      {"Hi! Welcome To Megha Info LLC 👋".split("").map((char, index) => (
+                        <motion.span
+                          key={index}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 2.8 + index * 0.04, duration: 0.1 }}
+                        >
+                          {char}
+                        </motion.span>
+                      ))}
+                    </span>
+                    <motion.span
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: [0, 1, 1, 0] }}
+                      transition={{ repeat: Infinity, duration: 0.8 }}
+                      className="inline-block ml-1.5 w-1.5 h-4 sm:h-5 bg-orange-400 rounded-full align-middle shrink-0"
+                    />
+                  </motion.div>
+
+                </div>
+              </motion.div>
+
+              {/* Robot with nod / wave animation */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, x: 50 }}
+                animate={{ 
+                  opacity: 1, 
+                  scale: 1, 
+                  x: 0, 
+                  y: [0, -15, 0],
+                  rotate: [0, 6, -3, 3, -1, 0] // simulates head movement / looking around
+                }}
+                transition={{ 
+                  opacity: { duration: 0.8 },
+                  scale: { duration: 0.8 },
+                  x: { duration: 0.8 },
+                  y: { repeat: Infinity, duration: 4, ease: "easeInOut", delay: 0.8 },
+                  rotate: { repeat: Infinity, duration: 7, ease: "easeInOut", delay: 1.2 }
+                }}
+                className="w-full max-w-[240px] sm:max-w-[400px] lg:max-w-[500px]"
+              >
+                <Image 
+                  src="/images/robot.png" 
+                  width={500} 
+                  height={600} 
+                  alt="AI Robot Assistant" 
+                  className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(249,115,22,0.5)] cursor-pointer hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Floating Stats Cards */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden lg:flex gap-8">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden lg:flex gap-6 w-full max-w-5xl justify-center">
           {[
             { value: "10+", label: "Years" },
             { value: "500+", label: "Projects" },
@@ -163,10 +263,10 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }}
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl px-6 py-3 text-center"
+              className="bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.2)] rounded-2xl px-8 py-4 text-center hover:-translate-y-2 hover:bg-white/20 transition-all duration-300 w-48"
             >
-              <div className="text-2xl font-bold text-accent">{stat.value}</div>
-              <div className="text-xs text-slate-400 uppercase tracking-wider">{stat.label}</div>
+              <div className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-accent to-amber-300 drop-shadow-sm">{stat.value}</div>
+              <div className="text-sm text-slate-200 uppercase tracking-widest mt-1 font-semibold">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -320,7 +420,7 @@ export default function Home() {
             <h3 className="text-sm font-semibold uppercase tracking-widest text-accent mb-2">Industries We Serve</h3>
             <p className="text-2xl font-bold text-white">Trusted Across Sectors</p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto px-4 relative z-20">
             {trustedBy.map((industry, i) => (
               <motion.div
                 key={industry}
@@ -328,9 +428,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-3 text-slate-300 font-medium text-sm hover:bg-accent/10 hover:border-accent/30 hover:text-accent transition-all duration-300 cursor-default"
+                className="bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.05)] rounded-full px-6 py-3 text-slate-200 font-semibold text-sm hover:bg-white/20 hover:scale-105 hover:border-white/40 hover:text-white hover:shadow-[0_8px_32px_0_rgba(255,255,255,0.15)] transition-all duration-300 cursor-default"
               >
-                <Globe className="w-4 h-4 inline mr-2 opacity-50" />
+                <Globe className="w-4 h-4 inline mr-2 opacity-70" />
                 {industry}
               </motion.div>
             ))}
