@@ -24,6 +24,7 @@ export default function Services() {
       Icon: Monitor,
       href: "/services/consulting",
       id: "consulting",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Application Development",
@@ -31,6 +32,7 @@ export default function Services() {
       Icon: Smartphone,
       href: "/services/app-dev",
       id: "app-dev",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Cloud Solutions",
@@ -38,6 +40,7 @@ export default function Services() {
       Icon: Cloud,
       href: "/services/cloud",
       id: "cloud",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Enterprise ERP",
@@ -45,6 +48,7 @@ export default function Services() {
       Icon: Database,
       href: "/services/erp",
       id: "erp",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Data Analytics",
@@ -52,6 +56,7 @@ export default function Services() {
       Icon: BarChart3,
       href: "/services/analytics",
       id: "analytics",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "BPM Services",
@@ -59,6 +64,7 @@ export default function Services() {
       Icon: Settings,
       href: "/services/bpm",
       id: "bpm",
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "IT Staffing",
@@ -66,6 +72,7 @@ export default function Services() {
       Icon: Users,
       href: "/services/staffing",
       id: "staffing",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Corporate Training",
@@ -73,6 +80,7 @@ export default function Services() {
       Icon: GraduationCap,
       href: "/services/training",
       id: "training",
+      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Mobile Apps",
@@ -80,6 +88,7 @@ export default function Services() {
       Icon: LayoutDashboard,
       href: "/services/mobile",
       id: "mobile",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
     },
   ];
 
@@ -132,6 +141,7 @@ export default function Services() {
                   description={service.description}
                   Icon={service.Icon}
                   href={service.href}
+                  image={service.image}
                   delay={index * 0.05}
                   className="h-full"
                 />

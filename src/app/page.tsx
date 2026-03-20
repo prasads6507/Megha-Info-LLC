@@ -15,36 +15,42 @@ export default function Home() {
       description: "Strategic guidance to align your technology initiatives with business objectives for sustainable growth.",
       Icon: Monitor,
       href: "/services/consulting",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Application Development",
       description: "End-to-end development lifecycle: Conception, Design, Deployment, and Renewal tailored to your needs.",
       Icon: Smartphone,
       href: "/services/app-dev",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Cloud Solutions",
       description: "Seamless migration and management of cloud infrastructures for scalable, secure enterprise operations.",
       Icon: Cloud,
       href: "/services/cloud",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Enterprise ERP",
       description: "Comprehensive resource planning systems to streamline your operations and maximize efficiency.",
       Icon: Database,
       href: "/services/erp",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Data Analytics",
       description: "Transform raw data into actionable insights, driving informed decision-making across your organization.",
       Icon: BarChart3,
       href: "/services/analytics",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "BPM Services",
       description: "Business Process Management solutions to optimize workflows and enhance overall productivity.",
       Icon: Settings,
       href: "/services/bpm",
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
     },
   ];
 
@@ -195,17 +201,25 @@ export default function Home() {
                     transition={{ delay: 2.8, duration: 0.1 }}
                     className="items-center"
                   >
-                    <span className="whitespace-pre-wrap sm:whitespace-pre tracking-wide leading-relaxed">
-                      {"Hi! Welcome To Megha Info LLC 👋".split("").map((char, index) => (
+                    <span className="whitespace-normal sm:whitespace-nowrap tracking-wide leading-relaxed">
+                      {"Hi! Welcome To Megha Info LLC".split("").map((char, index) => (
                         <motion.span
                           key={index}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ delay: 2.8 + index * 0.04, duration: 0.1 }}
                         >
-                          {char}
+                          {char === " " ? "\u00A0" : char}
                         </motion.span>
                       ))}
+                      <motion.span
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 2.8 + "Hi! Welcome To Megha Info LLC".length * 0.04, duration: 0.1 }}
+                        className="ml-1"
+                      >
+                        👋
+                      </motion.span>
                     </span>
                     <motion.span
                       initial={{ opacity: 0 }}
