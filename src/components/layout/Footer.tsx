@@ -82,8 +82,12 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-slate-800 text-sm text-center text-slate-500">
+        <div className="pt-8 border-t border-slate-800 text-sm flex flex-col md:flex-row justify-between items-center text-slate-500 space-y-4 md:space-y-0">
           <p>&copy; {new Date().getFullYear()} Megha Info LLC. All rights reserved.</p>
+          <div className="flex space-x-6">
+            <Link href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-accent transition-colors">Terms & Conditions</Link>
+          </div>
         </div>
       </div>
     </footer>
