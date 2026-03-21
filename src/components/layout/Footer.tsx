@@ -68,7 +68,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <span>14 Breckenridge Ct.<br />Bell Mead, NJ 08502</span>
+                <span>14 Breckenridge Ct.<br />Bell Mead, NJ 08502<br />United States</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Phone className="w-4 h-4 text-accent shrink-0" />
