@@ -280,12 +280,6 @@ export default function Careers() {
                 hr@meghainfollc.com
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a 
-                href="mailto:careers@meghainfollc.com" 
-                className="inline-flex items-center px-10 py-5 rounded-full bg-white/10 text-white font-bold text-xl hover:bg-white/20 backdrop-blur-sm transition-all duration-300"
-              >
-                careers@meghainfollc.com
-              </a>
             </div>
             <p className="mt-12 text-slate-400 text-sm italic">
               Megha Info LLC is an Equal Opportunity Employer. Relocation may be required.
