@@ -20,13 +20,6 @@ export function Footer() {
             <p className="text-sm leading-relaxed text-slate-400">
               Architecting the digital future through precision engineering and a constancy of learning. We empower enterprises to scale with intelligent, security-first solutions.
             </p>
-            <div className="flex space-x-4">
-              {[Linkedin, Twitter, Github].map((Icon, i) => (
-                <a key={i} href="#" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all duration-300">
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Column 2: Quick Links */}

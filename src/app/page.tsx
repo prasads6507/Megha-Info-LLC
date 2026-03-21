@@ -442,9 +442,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.05)] rounded-full px-6 py-3 text-slate-200 font-semibold text-sm hover:bg-white/20 hover:scale-105 hover:border-white/40 hover:text-white hover:shadow-[0_8px_32px_0_rgba(255,255,255,0.15)] transition-all duration-300 cursor-default"
+                className="bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.05)] rounded-full px-6 py-3 text-slate-200 font-semibold text-sm hover:bg-white/10 hover:scale-105 hover:border-accent hover:text-accent hover:shadow-[0_8px_32px_0_rgba(249,115,22,0.2)] transition-all duration-300 cursor-default group"
               >
-                <Globe className="w-4 h-4 inline mr-2 opacity-70" />
+                <Globe className="w-4 h-4 inline mr-2 opacity-70 group-hover:text-accent" />
                 {industry}
               </motion.div>
             ))}
