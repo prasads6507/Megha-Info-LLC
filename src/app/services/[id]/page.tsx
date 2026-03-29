@@ -22,7 +22,7 @@ import Image from "next/image";
 const servicesData = {
   "consulting": {
     title: "IT Consulting",
-    description: "In an era where technology is a critical driver of business success, Megha Info LLC provides strategic IT consulting services that bridge the gap between your technical capabilities and your business goals. We work closely with stakeholders to develop roadmaps that ensure technology investments deliver maximum ROI.",
+    description: "In an era where technology is a critical driver of business success, MEGHA INFO LLC provides strategic IT consulting services that bridge the gap between your technical capabilities and your business goals. We work closely with stakeholders to develop roadmaps that ensure technology investments deliver maximum ROI.",
     icon: Monitor,
     image: "/images/service-consulting.png",
     features: [
@@ -48,7 +48,7 @@ const servicesData = {
   },
   "cloud": {
     title: "Cloud Solutions",
-    description: "Megha Info LLC empowers enterprises to leverage the full potential of cloud computing. Whether you are migrating existing workloads or building cloud-native applications, we provide the expertise needed to ensure a secure, scalable, and cost-effective cloud environment.",
+    description: "MEGHA INFO LLC empowers enterprises to leverage the full potential of cloud computing. Whether you are migrating existing workloads or building cloud-native applications, we provide the expertise needed to ensure a secure, scalable, and cost-effective cloud environment.",
     icon: Cloud,
     image: "/images/service-cloud.png",
     features: [
@@ -74,7 +74,7 @@ const servicesData = {
   },
   "analytics": {
     title: "Data Analytics",
-    description: "Data is your most valuable asset. Megha Info LLC transforms raw data into actionable business intelligence. Our analytics solutions help you uncover hidden patterns, predict market trends, and make informed decisions with confidence.",
+    description: "Data is your most valuable asset. MEGHA INFO LLC transforms raw data into actionable business intelligence. Our analytics solutions help you uncover hidden patterns, predict market trends, and make informed decisions with confidence.",
     icon: BarChart3,
     image: "/images/service-analytics.png",
     features: [
@@ -100,7 +100,7 @@ const servicesData = {
   },
   "staffing": {
     title: "IT Staffing",
-    description: "Finding the right talent is the foundation of any successful tech initiative. Megha Info LLC connects you with highly skilled IT professionals who possess both the technical expertise and the cultural fit required to drive your projects forward.",
+    description: "Finding the right talent is the foundation of any successful tech initiative. MEGHA INFO LLC connects you with highly skilled IT professionals who possess both the technical expertise and the cultural fit required to drive your projects forward.",
     icon: Users,
     image: "/images/service-staffing.png",
     features: [

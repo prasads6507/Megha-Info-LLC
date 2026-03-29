@@ -202,7 +202,7 @@ export default function Home() {
                     className="items-center"
                   >
                     <span className="whitespace-normal sm:whitespace-nowrap tracking-wide leading-relaxed">
-                      {"Hi! Welcome To Megha Info LLC".split("").map((char, index) => (
+                      {"Hi! Welcome To MEGHA INFO LLC".split("").map((char, index) => (
                         <motion.span
                           key={index}
                           initial={{ opacity: 0 }}
@@ -215,7 +215,7 @@ export default function Home() {
                       <motion.span
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 2.8 + "Hi! Welcome To Megha Info LLC".length * 0.04, duration: 0.1 }}
+                        transition={{ delay: 2.8 + "Hi! Welcome To MEGHA INFO LLC".length * 0.04, duration: 0.1 }}
                         className="ml-1"
                       >
                         👋
@@ -364,7 +364,7 @@ export default function Home() {
                 Driving Innovation with <span className="text-accent">Velocity</span>
               </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                At Megha Info LLC, we believe in a constancy of learning. Our mission is to bridge the gap between your aspirations and technological realities.
+                At MEGHA INFO LLC, we believe in a constancy of learning. Our mission is to bridge the gap between your aspirations and technological realities.
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 By combining industry expertise with cutting-edge tools, we engineer solutions that not only solve today&apos;s challenges but future-proof your business for tomorrow.
@@ -383,7 +383,7 @@ export default function Home() {
             >
               <Image 
                 src="/images/corporate-showcase.png"
-                alt="Megha Info LLC Corporate Environment"
+                alt="MEGHA INFO LLC Corporate Environment"
                 fill
                 className="object-cover"
                 priority

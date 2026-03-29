@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { Shield } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Megha Info LLC",
-  description: "Privacy Policy and Data Protection at Megha Info LLC.",
+  title: "Privacy Policy | MEGHA INFO LLC",
+  description: "Privacy Policy and Data Protection at MEGHA INFO LLC.",
 };
 
 export default function PrivacyPolicy() {
@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
 
             <h2 className="text-2xl font-bold text-slate-900 border-b pb-2 mb-6 border-slate-200">1. Introduction</h2>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              At Megha Info LLC ("we," "us," or "our"), the security and privacy of your data are fundamental to our architecture. This Privacy Policy details our protocols for the collection, utilization, and safeguarding of information when you interact with our digital presence and enterprise IT services. By utilizing our infrastructure, you consent to the practices delineated herein.
+              At MEGHA INFO LLC ("we," "us," or "our"), the security and privacy of your data are fundamental to our architecture. This Privacy Policy details our protocols for the collection, utilization, and safeguarding of information when you interact with our digital presence and enterprise IT services. By utilizing our infrastructure, you consent to the practices delineated herein.
             </p>
 
             <h2 className="text-2xl font-bold text-slate-900 border-b pb-2 mb-6 border-slate-200">2. Data Collection</h2>
@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
 
             <h2 className="text-2xl font-bold text-slate-900 border-b pb-2 mb-6 border-slate-200">4. Third-Party Transmission</h2>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              Megha Info LLC maintains strict data sovereignty. We do not sell, encrypt, or route your personally identifiable information to unauthorized third-party grids. Data is only shared with verified infrastructure partners who operate under rigorous confidentiality agreements essential to service delivery.
+              MEGHA INFO LLC maintains strict data sovereignty. We do not sell, encrypt, or route your personally identifiable information to unauthorized third-party grids. Data is only shared with verified infrastructure partners who operate under rigorous confidentiality agreements essential to service delivery.
             </p>
 
             <h2 className="text-2xl font-bold text-slate-900 border-b pb-2 mb-6 border-slate-200">5. Security Infrastructure</h2>

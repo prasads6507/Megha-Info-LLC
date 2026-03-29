@@ -116,7 +116,7 @@ export default function Careers() {
             </span>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tight">
               Build Your Future with <br />
-              <span className="text-accent underline decoration-white/20 underline-offset-8">Megha Info LLC</span>
+              <span className="text-accent underline decoration-white/20 underline-offset-8">MEGHA INFO LLC</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
               We bring together talented people with diverse backgrounds who are passionate about their skills and driven to innovate.
@@ -132,7 +132,7 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* Why Megha Info Section */}
+      {/* Why MEGHA INFO Section */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -148,7 +148,7 @@ export default function Careers() {
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  At Megha Info LLC, we pride ourselves on being one of the fastest-growing and most successful firms in our field. Our success is driven by a strong commitment to client success and an entrepreneurial spirit.
+                  At MEGHA INFO LLC, we pride ourselves on being one of the fastest-growing and most successful firms in our field. Our success is driven by a strong commitment to client success and an entrepreneurial spirit.
                 </p>
                 <p>
                   We believe stagnation is the enemy. That's why we provide the tools, information, and support our employees need to expand their knowledge and stay current with the rapidly evolving IT industry.
@@ -168,7 +168,7 @@ export default function Careers() {
             >
               <Image 
                 src="/images/team-culture.png"
-                alt="Megha Info LLC Team Culture"
+                alt="MEGHA INFO LLC Team Culture"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -282,7 +282,7 @@ export default function Careers() {
               </a>
             </div>
             <p className="mt-12 text-slate-400 text-sm italic">
-              Megha Info LLC is an Equal Opportunity Employer. Relocation may be required.
+              MEGHA INFO LLC is an Equal Opportunity Employer. Relocation may be required.
             </p>
           </motion.div>
         </div>

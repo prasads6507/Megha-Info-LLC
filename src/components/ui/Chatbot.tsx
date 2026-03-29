@@ -18,12 +18,12 @@ const findResponse = (query: string): string => {
   
   // Greetings
   if (q.match(/\b(hi|hello|hey|greetings|howdy|morning|afternoon|evening)\b/i)) {
-    return "Hello there! Welcome to Megha Info LLC. As the digital representative of our company, I'm here to answer any questions about our enterprise IT services, careers, or technology stack. How can I help you today?";
+    return "Hello there! Welcome to MEGHA INFO LLC. As the digital representative of our company, I'm here to answer any questions about our enterprise IT services, careers, or technology stack. How can I help you today?";
   }
   
   // About / Mission / Philosophy / Velocity
   if (q.match(/\b(about|who are you|what is megha|mission|values|velocity|philosophy|owner|ceo|leadership)\b/i)) {
-    return "We are Megha Info LLC, a premier corporate IT services provider. Our mission is to bridge the gap between your ambitious business goals and actionable technological realities. We operate with 'Velocity'—moving fast with precise, strategic intent. We believe in the 'Constancy of Learning', dedicating 20% of our time to researching next-generation tools. We treat our clients' success as our own.";
+    return "We are MEGHA INFO LLC, a premier corporate IT services provider. Our mission is to bridge the gap between your ambitious business goals and actionable technological realities. We operate with 'Velocity'—moving fast with precise, strategic intent. We believe in the 'Constancy of Learning', dedicating 20% of our time to researching next-generation tools. We treat our clients' success as our own.";
   }
   
   // Contact Information (Address, Phone, Email)
@@ -89,7 +89,7 @@ export function Chatbot() {
     {
       id: "1",
       type: "bot",
-      content: "Hi! Welcome to Megha Info LLC. How can I help you today?",
+      content: "Hi! Welcome to MEGHA INFO LLC. How can I help you today?",
       timestamp: new Date(),
     }
   ]);
@@ -276,7 +276,7 @@ export function Chatbot() {
                     </button>
                   </form>
                   <div className="text-center mt-3">
-                    <span className="text-[10px] text-slate-500 tracking-wider uppercase font-medium">Powered by Megha Info AI</span>
+                    <span className="text-[10px] text-slate-500 tracking-wider uppercase font-medium">Powered by MEGHA INFO AI</span>
                   </div>
                 </div>
               </>

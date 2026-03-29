@@ -379,7 +379,7 @@ export default function Contact() {
                     className="mt-6 border border-green-500/30 bg-green-500/10 rounded-lg p-4 flex items-center justify-center"
                   >
                     <p className="text-green-400 font-medium text-sm text-center">
-                      Transmission intercepted successfully by Megha Info Systems. Awaiting human analysis.
+                      Transmission intercepted successfully by MEGHA INFO LLC. Awaiting human analysis.
                     </p>
                   </motion.div>
                 )}
