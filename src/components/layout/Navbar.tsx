@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Menu, X, Rocket } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,18 +48,15 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className={cn(
-                "p-2 rounded-lg transition-colors",
-                isScrolled || !isDarkHeroPage ? "bg-primary text-white group-hover:bg-accent" : "bg-accent text-white group-hover:bg-white group-hover:text-accent"
-              )}>
-                <Rocket className="w-6 h-6" />
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative w-10 h-10 flex items-center justify-center">
+                <Image src="/megha-logo.png" alt="MEGHA INFO LLC Logo" width={40} height={40} className="object-contain" />
               </div>
               <span className={cn(
                 "font-bold text-xl tracking-tight transition-colors",
                 isScrolled || !isDarkHeroPage ? "text-primary" : "text-white"
               )}>
-                Megha Info LLC
+                MEGHA INFO LLC
               </span>
             </Link>
           </div>

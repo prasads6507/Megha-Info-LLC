@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Rocket, Mail, Phone, MapPin, ChevronRight, Linkedin, Twitter, Github } from "lucide-react";
 
 export function Footer() {
@@ -11,11 +12,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Column 1: About */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2 text-white">
-              <div className="bg-accent text-white p-2 rounded-lg shadow-lg shadow-accent/20">
-                <Rocket className="w-5 h-5" />
+            <Link href="/" className="flex items-center gap-3 text-white">
+              <div className="relative w-10 h-10 flex items-center justify-center">
+                <Image src="/megha-logo.png" alt="MEGHA INFO LLC Logo" width={40} height={40} className="object-contain" />
               </div>
-              <span className="font-bold text-xl tracking-tight">Megha Info LLC</span>
+              <span className="font-bold text-xl tracking-tight">MEGHA INFO LLC</span>
             </Link>
             <p className="text-sm leading-relaxed text-slate-400">
               Architecting the digital future through precision engineering and a constancy of learning. We empower enterprises to scale with intelligent, security-first solutions.
@@ -83,7 +84,7 @@ export function Footer() {
         </div>
         
         <div className="pt-8 border-t border-slate-800 text-sm flex flex-col md:flex-row justify-between items-center text-slate-500 space-y-4 md:space-y-0">
-          <p>&copy; {new Date().getFullYear()} Megha Info LLC. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} MEGHA INFO LLC. All rights reserved.</p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-accent transition-colors">Terms & Conditions</Link>

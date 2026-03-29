@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Megha Info LLC - Corporate IT Services",
+  title: "MEGHA INFO LLC - Corporate IT Services",
   description: "Empowering Enterprise Excellence",
 };
 
