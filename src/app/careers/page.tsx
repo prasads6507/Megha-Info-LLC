@@ -274,10 +274,10 @@ export default function Careers() {
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <a 
-                href="mailto:hr@meghainfollc.com" 
+                href="mailto:hr@meghainfo.com" 
                 className="inline-flex items-center px-10 py-5 rounded-full bg-accent text-white font-bold text-xl hover:bg-white hover:text-primary transition-all duration-300 shadow-2xl group"
               >
-                hr@meghainfollc.com
+                hr@meghainfo.com
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
