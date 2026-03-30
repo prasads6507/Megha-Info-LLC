@@ -13,6 +13,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "MEGHA INFO LLC - Corporate IT Services",
   description: "Empowering Enterprise Excellence",
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({
